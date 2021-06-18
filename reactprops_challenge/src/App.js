@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Profile from "./profile/profile";
+import Navb from "./profile/header";
+import Footer from "./profile/footer";
+import Projects from "./profile/projects";
+import Contact from "./profile/contact";
 
 function App() {
+  const user = { name: "John Doe" };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>
+        <Navb />
+        <Profile
+          name="John Doe"
+          img="https://github.com/mohamedhan/template-portfolio-challenge/blob/main/images/John-Doe.jpg?raw=true"
+        />
+      </div>
+      <div>
+        <h2> Projects </h2>
+        <Projects />
+      </div>
+      <div>
+        <h2> Contact Me </h2>
+        <Contact />
+      </div>
+      <div className="footer">
+        {" "}
+        <Footer footer="Copyritghts © GOMYCODE 2020" />{" "}
+      </div>
     </div>
   );
 }
